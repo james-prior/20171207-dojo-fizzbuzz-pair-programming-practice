@@ -1,10 +1,9 @@
 def fizzbuzz(number):
-    if number % 15 == 0:
-        output = 'fizzbuzz'
-    elif number % 5 == 0:
-        output = 'buzz'
-    elif number % 3 == 0:
-        output = 'fizz'
-    else:
-        output = str(number)
-    return output
+    terms = []
+    if number % 3 == 0:
+        terms.append('fizz')
+    if number % 5 == 0:
+        terms.append('buzz')
+    if not terms:
+        terms.append(str(number))
+    return ''.join(terms)
