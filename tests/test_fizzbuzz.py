@@ -7,6 +7,7 @@ number_to_expected_string = (
     (2, '2'),
     (3, 'fizz'),
     (3., 'fizz'),
+    (3.+0j, 'fizz'),
     (6, 'fizz'),
     (5, 'buzz'),
     (10, 'buzz'),
