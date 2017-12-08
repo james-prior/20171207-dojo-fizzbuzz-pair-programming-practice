@@ -1,4 +1,6 @@
 def fizzbuzz(number):
+    if not isinstance(number, int):
+        raise ValueError
     if number == 'hello' or number == 'goodbye':
         raise ValueError
     terms = '' 
