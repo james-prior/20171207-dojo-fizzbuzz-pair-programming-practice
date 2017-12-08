@@ -5,6 +5,7 @@ def fizzbuzz(input_number):
         raise ValueError
     if number != input_number:
         raise ValueError
+
     terms = '' 
     if number % 3 == 0:
         terms += 'fizz'
