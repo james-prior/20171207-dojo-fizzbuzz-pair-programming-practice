@@ -1,11 +1,10 @@
-def fizzbuzz(number):
+def fizzbuzz(input_number):
     try:
-        polished_number = int(number.real)
+        number = int(input_number.real)
     except (TypeError, AttributeError):
         raise ValueError
-    if polished_number != number:
+    if number != input_number:
         raise ValueError
-    number = polished_number
     terms = '' 
     if number % 3 == 0:
         terms += 'fizz'
