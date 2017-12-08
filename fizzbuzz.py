@@ -1,11 +1,9 @@
 def fizzbuzz(number):
-    if number == 3.1415926:
+    try:
+        good = number == int(number)
+    except TypeError:
         raise ValueError
-    if isinstance(number, float):
-        number = int(number)
-    if not isinstance(number, int): 
-        raise ValueError
-    if number == 'hello' or number == 'goodbye':
+    if not good:
         raise ValueError
     terms = '' 
     if number % 3 == 0:
