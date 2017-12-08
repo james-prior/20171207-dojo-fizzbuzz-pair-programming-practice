@@ -21,16 +21,18 @@ def test_known_number_returns_expected(number, expected_string):
     #     print(len(number_to_expected_string), file=f)
     assert expected_string == fizzbuzz(number) 
 
-bad_values_to_expected_error = {
-    'hello': ValueError,
-    'goodbye': ValueError,
-    3.1415926: ValueError,
-    2.7182818: ValueError,
-    (1, 2): ValueError,
-    None: ValueError,
-    1j: ValueError,
-}
-@pytest.mark.parametrize('bad_value, expected_error', bad_values_to_expected_error.items())
+bad_values_to_expected_error = (
+    ('hello', ValueError),
+    ('goodbye', ValueError),
+    (3.1415926, ValueError),
+    (2.7182818, ValueError),
+    ((1, 2), ValueError),
+    ([1, 2], ValueError),
+    ({1, 2}, ValueError),
+    (None, ValueError),
+    (1j, ValueError),
+)
+@pytest.mark.parametrize('bad_value, expected_error', bad_values_to_expected_error)
 def test_known_value_returns_expected_error(bad_value, expected_error):
     # Rendundant tests show alternate syntax.
 
