@@ -1,5 +1,5 @@
 def fizzbuzz(number):
-    if number == 'hello':
+    if number == 'hello' or number == 'goodbye':
         raise ValueError
     terms = '' 
     if number % 3 == 0:
