@@ -27,6 +27,7 @@ bad_values_to_expected_error = {
     3.1415926: ValueError,
     2.7182818: ValueError,
     (1, 2): ValueError,
+    None: ValueError,
 }
 @pytest.mark.parametrize('bad_value, expected_error', bad_values_to_expected_error.items())
 def test_known_value_returns_expected_error(bad_value, expected_error):
