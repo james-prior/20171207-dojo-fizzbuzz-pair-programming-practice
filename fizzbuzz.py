@@ -1,9 +1,9 @@
 def fizzbuzz(number):
-    terms = []
+    terms = '' 
     if number % 3 == 0:
-        terms.append('fizz')
+        terms += 'fizz'
     if number % 5 == 0:
-        terms.append('buzz')
+        terms += 'buzz'
     if not terms:
-        terms.append(str(number))
-    return ''.join(terms)
+        terms += str(number)
+    return terms
